@@ -1,0 +1,107 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/accountManagerApex": [
+                "accountManagerApex/accountManagerApex.js"
+            ],
+            "c/accountManagerLDS": [
+                "accountManagerLDS/accountManagerLDS.js"
+            ],
+            "c/accountManagerLDSForm": [
+                "accountManagerLDSForm/accountManagerLDSForm.js"
+            ],
+            "c/accountRecordForm": [
+                "accountRecordForm/accountRecordForm.js"
+            ],
+            "c/auraPubsub": [
+                "auraPubsub/auraPubsub.js"
+            ],
+            "c/bmi": [
+                "bmi/bmi.js"
+            ],
+            "c/bmiCalculator": [
+                "bmiCalculator/bmiCalculator.js"
+            ],
+            "c/carSearch": [
+                "carSearch/carSearch.js"
+            ],
+            "c/carSearchForm": [
+                "carSearchForm/carSearchForm.js"
+            ],
+            "c/carSearchResult": [
+                "carSearchResult/carSearchResult.js"
+            ],
+            "c/conditionalRenderingExample": [
+                "conditionalRenderingExample/conditionalRenderingExample.js"
+            ],
+            "c/helloWorld": [
+                "helloWorld/helloWorld.js"
+            ],
+            "c/lifeCycleDemo": [
+                "lifeCycleDemo/lifeCycleDemo.js"
+            ],
+            "c/meetingRoom": [
+                "meetingRoom/meetingRoom.js"
+            ],
+            "c/meetingRoomEventExample": [
+                "meetingRoomEventExample/meetingRoomEventExample.js"
+            ],
+            "c/meetingRooms": [
+                "meetingRooms/meetingRooms.js"
+            ],
+            "c/meetingRoomsParentEventExample": [
+                "meetingRoomsParentEventExample/meetingRoomsParentEventExample.js"
+            ],
+            "c/navigationExample": [
+                "navigationExample/navigationExample.js"
+            ],
+            "c/publicMethodChild": [
+                "publicMethodChild/publicMethodChild.js"
+            ],
+            "c/publicMethodParent": [
+                "publicMethodParent/publicMethodParent.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c/selectedMeetingRoom": [
+                "selectedMeetingRoom/selectedMeetingRoom.js"
+            ],
+            "c/simpleCalculator": [
+                "simpleCalculator/simpleCalculator.js"
+            ],
+            "c/simpleLightBoxExample": [
+                "simpleLightBoxExample/simpleLightBoxExample.js"
+            ],
+            "c/carTile": [
+                "carTile/carTile.js"
+            ],
+            "c/carDetails": [
+                "carDetails/carDetails.js"
+            ],
+            "c/carDetail": [
+                "carDetail/carDetail.js"
+            ],
+            "c/addCarExperience": [
+                "addCarExperience/addCarExperience.js"
+            ],
+            "c/carExperiences": [
+                "carExperiences/carExperiences.js"
+            ],
+            "c/carLocation": [
+                "carLocation/carLocation.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

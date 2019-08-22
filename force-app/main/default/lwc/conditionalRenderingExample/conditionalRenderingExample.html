@@ -1,0 +1,20 @@
+<template>
+    <lightning-input type="checkbox" onchange={showDivHandler} label="Show Div"></lightning-input>
+    <template if:true={displayDiv}>
+        <div>Display if true</div>
+    </template>   
+    <template if:false={displayDiv}>
+        <div>Display if false</div>
+    </template> 
+
+    <template for:each={cityList} for:item="cityVar">
+        <div key={cityVar}>{cityVar}</div>
+    </template>
+
+    <h1>Below example is using Iterator directive</h1>
+    <template iterator:it={cityList}>
+        <p key={it.value}>{it.value} - indexed @{it.index}</p>
+        <!--<div key={it.first}>First Value is {it.first}</div>
+        <div key={it.last}>Last Value is {it.last}</div>--><!--first and last return only true/false based on the index-->
+    </template>
+</template>

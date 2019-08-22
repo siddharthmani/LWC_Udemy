@@ -1,0 +1,16 @@
+{
+  "name": "lwc_samples",
+  "version": "1.0.0",
+  "description": "Unit testing for LWC Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:unit" : "lwc-jest",
+    "test:unit:debug" : "lwc-jest --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@salesforce/lwc-jest": "^0.5.4"
+  }
+}
