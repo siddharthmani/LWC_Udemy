@@ -1,9 +1,2 @@
-# SFDX App
-
-## Dev, Build and Test
-
-## Resources
-
-## Description of Files and Directories
-
-## Issues
+#To create initial data:
+CreateData.createPackageData(); //run in dev console
