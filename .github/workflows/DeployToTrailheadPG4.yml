@@ -1,0 +1,45 @@
+# This is a basic workflow to help you get started with Actions
+
+name: DeployToTrailheadPG
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the Pre-Release-Sprint-4-1 branch
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - '*Develop*'
+
+    paths-ignore:
+      - 'buildfiles/**'
+      - '.github/**'
+      - 'DX Batch Files/**'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  DeployNow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      URL: https://login.salesforce.com
+      USERNAME: sidthegreat@playful-badger-i88bog.com
+      CLIENTID: 3MVG9n_HvETGhr3BKO.4imCkarZGeJebcyDDJr0lTkkW_DsNN8GDHf37idWu6TbjXS2o2IKXM0BavY8tC.kiH
+      BASEBRANCH:  origin/master
+    steps:
+
+      - name: Fetch All Branches
+        run: git fetch --all
+
+      - name: Install SFDX
+        run: |
+          wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+          mkdir sfdx-cli
+          tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
+          ./sfdx-cli/install
+      - name: Authorize Sandbox
+        run: sfdx auth:jwt:grant -u $USERNAME -f ./buildfiles/server.key -i $CLIENTID -r $URL -a PLAYGROUND4
+
+      - name: Deploy to Trailhead Playground
+        run: |
+          cd ReleaseDeploy
+          sfdx force:source:deploy -u PLAYGROUND4 --verbose -p force-app/main/default
