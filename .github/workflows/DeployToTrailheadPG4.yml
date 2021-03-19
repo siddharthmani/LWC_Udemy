@@ -26,10 +26,7 @@ jobs:
       CLIENTID: 3MVG9n_HvETGhr3BKO.4imCkarZGeJebcyDDJr0lTkkW_DsNN8GDHf37idWu6TbjXS2o2IKXM0BavY8tC.kiH
       BASEBRANCH:  origin/master
     steps:
-
-      - name: Fetch All Branches
-        run: git fetch --all
-
+    
       - name: Install SFDX
         run: |
           wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
