@@ -24,8 +24,9 @@ jobs:
       URL: https://login.salesforce.com
       USERNAME: sidthegreat@playful-badger-i88bog.com
       CLIENTID: 3MVG9n_HvETGhr3BKO.4imCkarZGeJebcyDDJr0lTkkW_DsNN8GDHf37idWu6TbjXS2o2IKXM0BavY8tC.kiH
-      BASEBRANCH:  origin/master
+      BASEBRANCH: origin/master
     steps:
+      - uses: actions/checkout@v2
 
       - name: Fetch All Branches
         run: git fetch --all
