@@ -42,5 +42,4 @@ jobs:
 
       - name: Deploy to Trailhead Playground
         run: |
-          cd ReleaseDeploy
           sfdx force:source:deploy -u PLAYGROUND4 --verbose -p force-app/main/default
